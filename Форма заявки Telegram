@@ -1,0 +1,19 @@
+<form id="orderForm">
+  <input type="text" name="name" placeholder="Ваше ім’я" required>
+  <input type="tel" name="phone" placeholder="Ваш телефон" required>
+  <textarea name="comment" placeholder="Коментар (товар, розмір, кількість)"></textarea>
+  <button type="submit">Надіслати в Telegram</button>
+</form>
+
+<script>
+  document.getElementById("orderForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    let name = this.name.value;
+    let phone = this.phone.value;
+    let comment = this.comment.value;
+    
+    let text = `🛒 Нова заявка\n👤 Ім’я: ${name}\n📞 Телефон: ${phone}\n✏️ Коментар: ${comment}`;
+    let url = "https://t.me/share/url?url=" + encodeURIComponent(text);
+    window.open(url, "_blank");
+  });
+</script>
