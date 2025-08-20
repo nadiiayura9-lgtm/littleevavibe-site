@@ -1,19 +1,19 @@
-<form id="orderForm">
-  <input type="text" name="name" placeholder="Ваше ім’я" required>
-  <input type="tel" name="phone" placeholder="Ваш телефон" required>
-  <textarea name="comment" placeholder="Коментар (товар, розмір, кількість)"></textarea>
-  <button type="submit">Надіслати в Telegram</button>
-</form>
-
-<script>
-  document.getElementById("orderForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    let name = this.name.value;
-    let phone = this.phone.value;
-    let comment = this.comment.value;
-    
-    let text = `🛒 Нова заявка\n👤 Ім’я: ${name}\n📞 Телефон: ${phone}\n✏️ Коментар: ${comment}`;
-    let url = "https://t.me/share/url?url=" + encodeURIComponent(text);
-    window.open(url, "_blank");
-  });
-</script>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма заявки – Littleevavibe</title>
+</head>
+<body>
+  <h1>Форма заявки</h1>
+  <form action="https://t.me/твій_бот" method="get">
+    <label>Ваше ім’я:<br><input type="text" name="name" required></label><br><br>
+    <label>Телефон:<br><input type="text" name="phone" required></label><br><br>
+    <label>Товар:<br><input type="text" name="product" required></label><br><br>
+    <button type="submit">Надіслати</button>
+  </form>
+  
+  <a href="index.html">← На головну</a>
+</body>
+</html>
