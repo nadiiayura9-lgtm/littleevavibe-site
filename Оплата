@@ -1,1 +1,15 @@
-<li><a href="payment.html">Оплата/Доставка</a></li>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оплата – Littleevavibe</title>
+</head>
+<body>
+  <h1>Оплата</h1>
+  <p>Ми приймаємо оплату на банківську карту або через Monobank/Privat24.</p>
+  <p>Реквізити ви отримаєте після підтвердження замовлення 💚</p>
+  
+  <a href="index.html">← На головну</a>
+</body>
+</html>
