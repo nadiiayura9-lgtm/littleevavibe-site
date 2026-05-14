@@ -12,7 +12,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+html {
 
+  scroll-behavior: smooth;
+
+}
+
+.menu {
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+  padding: 20px;
+
+}
+
+.menu a {
+
+  text-decoration: none;
+
+  color: #444;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
+}
+
+.menu a:hover {
+
+  color: #d98ca3;
 *{
 margin:0;
 padding:0;
@@ -182,7 +218,41 @@ box-shadow:0 15px 35px rgba(0,0,0,0.08);
 }
 
 /* CATEGORIES */
+<section id="home">
 
+  <h2>Головна</h2>
+
+</section>
+
+<section id="catalog">
+
+  <h2>Каталог</h2>
+
+</section>
+
+<section id="new">
+
+  <h2>Новинки</h2>
+
+</section>
+
+<section id="shoes">
+
+  <h2>Взуття</h2>
+
+</section>
+
+<section id="reviews">
+
+  <h2>Відгуки</h2>
+
+</section>
+
+<section id="payment">
+
+  <h2>Оплата</h2>
+
+</section>
 .section{
 padding:80px 0;
 }
@@ -447,13 +517,22 @@ Little Eva <span>Vibe</span>
 </div>
 
 <nav>
-<a href="#">Головна</a>
-<a href="#">Каталог</a>
-<a href="#">Новинки</a>
-<a href="#">Взуття</a>
-<a href="#">Відгуки</a>
-<a href="#">Оплата</a>
+<nav class="menu">
+
+  <a href="#home">Головна</a>
+
+  <a href="#catalog">Каталог</a>
+
+  <a href="#new">Новинки</a>
+
+  <a href="#shoes">Взуття</a>
+
+  <a href="#reviews">Відгуки</a>
+
+  <a href="#payment">Оплата</a>
+
 </nav>
+
 
 </div>
 
