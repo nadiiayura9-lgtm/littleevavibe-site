@@ -1,458 +1,649 @@
 <!DOCTYPE html>
+
 <html lang="uk">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Little Eva Vibe | Дитячий одяг та взуття</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-html {
 
-  scroll-behavior: smooth;
-
-}
-
-.menu {
-
-  display: flex;
-
-  justify-content: center;
-
-  flex-wrap: wrap;
-
-  gap: 20px;
-
-  padding: 20px;
-
-}
-
-.menu a {
-
-  text-decoration: none;
-
-  color: #444;
-
-  font-size: 18px;
-
-  font-weight: 600;
-
-  transition: 0.3s;
-
-}
-
-.menu a:hover {
-
-  color: #d98ca3;
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
 
-body{
-font-family:'Montserrat',sans-serif;
-background:#fffaf8;
-color:#444;
-line-height:1.5;
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
 }
 
 html{
+
 scroll-behavior:smooth;
+
 }
 
-a{
-text-decoration:none;
-}
+body{
 
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
+font-family:'Montserrat',sans-serif;
+
+background:#fffaf8;
+
+color:#444;
+
+line-height:1.5;
+
 }
 
 /* HEADER */
 
 header{
+
 position:sticky;
+
 top:0;
+
 z-index:1000;
+
 background:rgba(255,255,255,0.95);
+
 backdrop-filter:blur(10px);
+
 border-bottom:1px solid #f1eaea;
+
 }
 
 .topbar{
-background:#f8dede;
-padding:8px;
-font-size:14px;
-color:#7c6666;
+
+background:#f7dfe5;
+
+padding:10px;
+
 text-align:center;
+
+font-size:14px;
+
+color:#7c6666;
+
+}
+
+.container{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
 }
 
 .navbar{
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
+
 padding:18px 0;
+
+flex-wrap:wrap;
+
+gap:20px;
+
 }
 
 .logo{
+
 font-size:32px;
+
 font-weight:700;
+
 color:#d98f9f;
+
 }
 
 .logo span{
-color:#a8c5a0;
+
+color:#a9c6a1;
+
 }
 
 nav{
+
 display:flex;
+
 gap:18px;
+
+flex-wrap:wrap;
+
 }
 
 nav a{
+
+text-decoration:none;
+
 color:#555;
+
 font-weight:500;
+
 transition:0.3s;
+
 }
 
 nav a:hover{
+
 color:#d98f9f;
+
 }
 
 /* HERO */
 
 .hero{
+
 padding:80px 0;
-background:linear-gradient(to right,#fff5f6,#f2f8f0);
+
+background:linear-gradient(to right,#fff3f6,#eef7ec);
+
 }
 
 .hero-wrapper{
+
 display:flex;
+
 align-items:center;
+
 justify-content:space-between;
+
 gap:50px;
+
 flex-wrap:wrap;
+
 }
 
 .hero-text{
+
 flex:1;
+
 min-width:300px;
-text-align:left;
+
 }
 
 .badge{
+
 display:inline-block;
+
 padding:10px 18px;
-background:#ffe8ec;
-border-radius:30px;
+
+background:#ffe7ec;
+
+border-radius:50px;
+
 color:#d98f9f;
+
 font-size:14px;
-margin-bottom:20px;
+
 font-weight:600;
+
+margin-bottom:20px;
+
 }
 
 .hero h1{
-font-size:54px;
+
+font-size:56px;
+
 line-height:1.1;
+
 margin-bottom:25px;
-color:#444;
+
 }
 
 .hero p{
+
 font-size:18px;
+
+color:#666;
+
 margin-bottom:35px;
+
 max-width:500px;
-color:#777;
+
 }
 
 .hero-buttons{
+
 display:flex;
+
 gap:15px;
+
 flex-wrap:wrap;
+
 }
 
 .btn{
+
 padding:15px 28px;
+
 border-radius:50px;
+
+text-decoration:none;
+
 font-weight:600;
+
 transition:0.3s;
+
 display:inline-block;
+
 }
 
 .btn-primary{
-background:#e7a7b3;
+
+background:#e6a4b0;
+
 color:white;
+
 }
 
 .btn-primary:hover{
-background:#dc93a1;
+
+background:#db8f9d;
+
 }
 
 .btn-secondary{
+
 background:white;
-border:1px solid #ddd;
+
 color:#555;
+
+border:1px solid #eee;
+
 }
 
 .btn-secondary:hover{
-background:#f7f7f7;
+
+background:#fafafa;
+
 }
 
 .hero-image{
+
 flex:1;
+
 min-width:300px;
+
 }
 
 .hero-image img{
+
 width:100%;
+
 border-radius:35px;
-box-shadow:0 15px 35px rgba(0,0,0,0.08);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
 }
 
-/* CATEGORIES */
-<section id="home">
+/* SECTION */
 
-  <h2>Головна</h2>
-
-</section>
-
-<section id="catalog">
-
-  <h2>Каталог</h2>
-
-</section>
-
-<section id="new">
-
-  <h2>Новинки</h2>
-
-</section>
-
-<section id="shoes">
-
-  <h2>Взуття</h2>
-
-</section>
-
-<section id="reviews">
-
-  <h2>Відгуки</h2>
-
-</section>
-
-<section id="payment">
-
-  <h2>Оплата</h2>
-
-</section>
 .section{
+
 padding:80px 0;
+
 }
 
 .section-title{
-font-size:40px;
-margin-bottom:40px;
+
 text-align:center;
-color:#444;
+
+font-size:40px;
+
+margin-bottom:40px;
+
 }
 
+/* CATEGORIES */
+
 .categories{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
 gap:25px;
+
 }
 
 .category-card{
+
 background:white;
-padding:30px;
+
+padding:25px;
+
 border-radius:30px;
-transition:0.3s;
+
 box-shadow:0 8px 25px rgba(0,0,0,0.05);
+
+transition:0.3s;
+
+text-align:center;
+
 }
 
 .category-card:hover{
+
 transform:translateY(-6px);
+
 }
 
 .category-card img{
-width:100%;
-border-radius:20px;
-margin-bottom:20px;
-}
 
-.category-card h3{
-margin-bottom:10px;
+width:100%;
+
+border-radius:20px;
+
+margin-bottom:20px;
+
+height:250px;
+
+object-fit:cover;
+
 }
 
 /* PRODUCTS */
 
 .products{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
 gap:25px;
+
 }
 
 .product{
+
 background:white;
+
 border-radius:25px;
+
 overflow:hidden;
+
 box-shadow:0 8px 25px rgba(0,0,0,0.05);
+
 transition:0.3s;
+
 position:relative;
+
 }
 
 .product:hover{
+
 transform:translateY(-6px);
+
 }
 
 .product img{
+
 width:100%;
-height:260px;
+
+height:280px;
+
 object-fit:cover;
+
 }
 
-.new{
+.tag{
+
 position:absolute;
+
 top:15px;
+
 left:15px;
-background:#e7a7b3;
+
+background:#e6a4b0;
+
 color:white;
+
 padding:7px 14px;
+
 border-radius:30px;
+
 font-size:12px;
+
 font-weight:600;
+
 }
 
 .product-content{
+
 padding:20px;
-text-align:left;
+
 }
 
 .product-content h3{
+
 margin-bottom:10px;
-font-size:18px;
+
 }
 
 .price{
-font-size:20px;
+
+font-size:22px;
+
 font-weight:700;
+
 color:#d98f9f;
+
 margin-bottom:15px;
+
 }
 
 /* ABOUT */
 
 .about{
+
 background:#f7f7f7;
-border-radius:40px;
+
 padding:60px;
+
+border-radius:40px;
+
 text-align:center;
+
 }
 
 .about p{
+
 max-width:700px;
+
 margin:auto;
+
 font-size:18px;
+
 color:#666;
+
 }
 
-/* INFO BLOCKS */
+/* INFO */
 
 .info-grid{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
 gap:25px;
+
 }
 
 .info-card{
+
 background:white;
+
 padding:30px;
+
 border-radius:25px;
+
 box-shadow:0 8px 20px rgba(0,0,0,0.05);
+
+text-align:center;
+
 }
 
 .info-card h3{
+
 margin-bottom:15px;
+
 color:#d98f9f;
+
+}
+
+/* REVIEWS */
+
+.reviews{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+.review{
+
+background:white;
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+
+}
+
+.review span{
+
+font-size:22px;
+
 }
 
 /* FOOTER */
 
 footer{
-margin-top:80px;
+
 background:#fff0f2;
+
 padding:60px 0 30px;
+
+margin-top:50px;
+
 }
 
 .footer-grid{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
 gap:30px;
+
 margin-bottom:40px;
+
 }
 
 .footer-title{
-margin-bottom:18px;
+
 font-size:20px;
+
 font-weight:700;
+
+margin-bottom:15px;
+
 }
 
 footer p,
+
 footer a{
+
 color:#666;
-font-size:15px;
-}
 
-.socials{
-display:flex;
-gap:12px;
-margin-top:15px;
-}
+text-decoration:none;
 
-.socials a{
-padding:10px 16px;
-background:white;
-border-radius:50px;
+margin-bottom:10px;
+
+display:block;
+
 }
 
 /* FLOAT BUTTONS */
 
 .float-buttons{
+
 position:fixed;
+
 right:20px;
+
 bottom:20px;
+
 display:flex;
+
 flex-direction:column;
+
 gap:15px;
+
 z-index:999;
+
 }
 
 .float-buttons a{
+
 width:60px;
+
 height:60px;
+
 border-radius:50%;
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
+
 font-size:24px;
+
 color:white;
+
+text-decoration:none;
+
 box-shadow:0 8px 25px rgba(0,0,0,0.15);
+
 }
 
 .telegram{
-background:#5db0ff;
+
+background:#4ea7ff;
+
 }
 
 .instagram{
-background:#e7a7b3;
+
+background:#e6a4b0;
+
 }
 
 /* MOBILE */
@@ -460,52 +651,59 @@ background:#e7a7b3;
 @media(max-width:768px){
 
 .hero h1{
+
 font-size:38px;
+
 }
 
 .hero-wrapper{
+
 flex-direction:column;
+
 }
 
 .hero-text{
+
 text-align:center;
+
 }
 
 .hero p{
+
 margin:auto auto 30px;
+
 }
 
 .hero-buttons{
-justify-content:center;
-}
 
-.navbar{
-flex-direction:column;
-gap:20px;
-}
-
-nav{
-flex-wrap:wrap;
 justify-content:center;
+
 }
 
 .section-title{
+
 font-size:30px;
+
 }
 
 .about{
+
 padding:35px 25px;
+
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="topbar">
-🤍 Безкоштовна доставка від 2000 грн
+
+🤍 Little Eva Vibe — стильний дитячий одяг та взуття
+
 </div>
 
 <header>
@@ -513,75 +711,73 @@ padding:35px 25px;
 <div class="container navbar">
 
 <div class="logo">
+
 Little Eva <span>Vibe</span>
+
 </div>
 
 <nav>
-<nav class="menu">
 
-  <a href="#home">Головна</a>
+<a href="#home">Головна</a>
 
-  <a href="#catalog">Каталог</a>
+<a href="#catalog">Каталог</a>
 
-  <a href="#new">Новинки</a>
+<a href="#new">Новинки</a>
 
-  <a href="#shoes">Взуття</a>
+<a href="#reviews">Відгуки</a>
 
-  <a href="#reviews">Відгуки</a>
-
-  <a href="#payment">Оплата</a>
+<a href="#payment">Оплата</a>
 
 </nav>
-
 
 </div>
 
 </header>
 
-<section class="hero">
+<!-- HERO -->
+
+<section class="hero" id="home">
 
 <div class="container hero-wrapper">
 
 <div class="hero-text">
 
 <div class="badge">
+
 Нова колекція ✨
+
 </div>
 
 <h1>
+
 Стильний дитячий одяг та взуття
+
 </h1>
 
 <p>
+
 Якісні, комфортні та трендові моделі для маленьких модників та модниць 🤍
+
 </p>
 
 <div class="hero-buttons">
 
-<a href="#" class="btn btn-primary">
+<a href="#catalog" class="btn btn-primary">
+
 Перейти в каталог
+
 </a>
 
- <!-- Telegram -->
+<a href="https://t.me/OQSCHnx_zG1jNjQy" target="_blank" class="btn btn-secondary">
 
-  <a href="https://t.me/OQSCHnx_zG1jNjQy" target="_blank"
+Telegram
 
-     style="display:inline-block; margin:10px; padding:10px 15px; background:#0088cc; color:white; text-decoration:none; border-radius:8px;">
-
-    💬 Написати в Telegram
-
-  </a>
 </a>
 
-  <!-- Instagram (можеш замінити) -->
+<a href="https://instagram.com/" target="_blank" class="btn btn-secondary">
 
-  <a href="https://instagram.com/" target="_blank"
+Instagram
 
-     style="display:inline-block; margin:5px; color:#E1306C; text-decoration:none;">
-
-    📸 Instagram
-
-  </a>
 </a>
 
 </div>
@@ -598,32 +794,48 @@ Little Eva <span>Vibe</span>
 
 </section>
 
-<section class="section">
+<!-- CATEGORIES -->
+
+<section class="section" id="catalog">
 
 <div class="container">
 
 <h2 class="section-title">
+
 Категорії
+
 </h2>
 
 <div class="categories">
 
 <div class="category-card">
+
 <img src="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?q=80&w=800&auto=format&fit=crop">
+
 <h3>Для дівчаток</h3>
-<p>Стильні сукні та комплекти</p>
+
+<p>Ніжні та стильні образи</p>
+
 </div>
 
 <div class="category-card">
+
 <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=800&auto=format&fit=crop">
+
 <h3>Для хлопчиків</h3>
-<p>Трендові образи щодня</p>
+
+<p>Трендовий дитячий стиль</p>
+
 </div>
 
 <div class="category-card">
+
 <img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?q=80&w=800&auto=format&fit=crop">
+
 <h3>Взуття</h3>
-<p>Комфорт та стиль</p>
+
+<p>Комфорт та якість</p>
+
 </div>
 
 </div>
@@ -632,20 +844,26 @@ Little Eva <span>Vibe</span>
 
 </section>
 
-<section class="section">
+<!-- PRODUCTS -->
+
+<section class="section" id="new">
 
 <div class="container">
 
 <h2 class="section-title">
+
 Новинки
+
 </h2>
 
 <div class="products">
 
 <div class="product">
 
-<div class="new">
+<div class="tag">
+
 NEW
+
 </div>
 
 <img src="https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=800&auto=format&fit=crop">
@@ -655,11 +873,15 @@ NEW
 <h3>Ніжна сукня</h3>
 
 <div class="price">
+
 890 грн
+
 </div>
 
 <a href="form.html" class="btn btn-primary">
+
 Замовити
+
 </a>
 
 </div>
@@ -668,8 +890,10 @@ NEW
 
 <div class="product">
 
-<div class="new">
+<div class="tag">
+
 TOP
+
 </div>
 
 <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop">
@@ -679,11 +903,15 @@ TOP
 <h3>Літній комплект</h3>
 
 <div class="price">
+
 790 грн
+
 </div>
 
 <a href="form.html" class="btn btn-primary">
+
 Замовити
+
 </a>
 
 </div>
@@ -692,8 +920,10 @@ TOP
 
 <div class="product">
 
-<div class="new">
+<div class="tag">
+
 NEW
+
 </div>
 
 <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop">
@@ -703,11 +933,15 @@ NEW
 <h3>Стильні босоніжки</h3>
 
 <div class="price">
+
 950 грн
+
 </div>
 
 <a href="form.html" class="btn btn-primary">
+
 Замовити
+
 </a>
 
 </div>
@@ -720,6 +954,8 @@ NEW
 
 </section>
 
+<!-- ABOUT -->
+
 <section class="section">
 
 <div class="container">
@@ -727,12 +963,17 @@ NEW
 <div class="about">
 
 <h2 class="section-title">
+
 Про магазин
+
 </h2>
 
 <p>
-Little Eva Vibe — це стильний дитячий одяг та взуття для діток від 0 до 10 років ✨  
-Ми обираємо лише якісні, зручні та трендові моделі з любовʼю до ваших малюків 🤍
+
+Little Eva Vibe — це стильний дитячий одяг та взуття для діток 🤍  
+
+Ми обираємо лише якісні, комфортні та трендові моделі з любовʼю до ваших малюків ✨
+
 </p>
 
 </div>
@@ -741,35 +982,110 @@ Little Eva Vibe — це стильний дитячий одяг та взут�
 
 </section>
 
-<section class="section">
+<!-- REVIEWS -->
+
+<section class="section" id="reviews">
 
 <div class="container">
 
 <h2 class="section-title">
+
+Відгуки клієнтів
+
+</h2>
+
+<div class="reviews">
+
+<div class="review">
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<p>
+
+Дуже гарна якість та швидка доставка 🤍
+
+</p>
+
+</div>
+
+<div class="review">
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<p>
+
+Вживу речі ще красивіші ніж на фото 😍
+
+</p>
+
+</div>
+
+<div class="review">
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<p>
+
+Замовляємо вже не вперше, все супер ✨
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PAYMENT -->
+
+<section class="section" id="payment">
+
+<div class="container">
+
+<h2 class="section-title">
+
 Оплата та доставка
+
 </h2>
 
 <div class="info-grid">
 
 <div class="info-card">
+
 <h3>🚚 Доставка</h3>
+
 <p>
+
 Нова Пошта та Укрпошта по Україні
+
 </p>
+
 </div>
 
 <div class="info-card">
+
 <h3>💳 Оплата</h3>
+
 <p>
+
 Повна оплата або передоплата 200 грн
+
 </p>
+
 </div>
 
 <div class="info-card">
+
 <h3>🔄 Обмін/Повернення</h3>
+
 <p>
+
 Можливий обмін та повернення товару
+
 </p>
+
 </div>
 
 </div>
@@ -777,6 +1093,8 @@ Little Eva Vibe — це стильний дитячий одяг та взут�
 </div>
 
 </section>
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -787,11 +1105,15 @@ Little Eva Vibe — це стильний дитячий одяг та взут�
 <div>
 
 <div class="footer-title">
+
 Little Eva Vibe
+
 </div>
 
 <p>
-Стильний дитячий одяг та взуття для маленьких модників 🤍
+
+Стильний дитячий одяг та взуття 🤍
+
 </p>
 
 </div>
@@ -799,89 +1121,80 @@ Little Eva Vibe
 <div>
 
 <div class="footer-title">
+
 Навігація
+
 </div>
 
-<p><a href="#">Каталог</a></p>
-<p><a href="#">Новинки</a></p>
-<p><a href="#">Відгуки</a></p>
+<a href="#catalog">Каталог</a>
+
+<a href="#new">Новинки</a>
+
+<a href="#reviews">Відгуки</a>
 
 </div>
 
 <div>
 
 <div class="footer-title">
+
 Контакти
+
 </div>
 
-<p>Telegram</p>
-<p>Instagram</p>
-<p>+380997027612</p>
+<a href="https://t.me/OQSCHnx_zG1jNjQy" target="_blank">
+
+Telegram
+
+</a>
+
+<a href="https://instagram.com/" target="_blank">
+
+Instagram
+
+</a>
+
+<p>
+
++380 XX XXX XX XX
+
+</p>
 
 </div>
 
 </div>
 
 <p style="text-align:center;">
+
 © 2026 Little Eva Vibe. Всі права захищені.
+
 </p>
 
 </div>
 
 </footer>
 
+<!-- FLOAT BUTTONS -->
+
 <div class="float-buttons">
 
-<a href="https://t.me/" class="telegram">
+<a href="https://t.me/OQSCHnx_zG1jNjQy" target="_blank" class="telegram">
+
 ✈
+
 </a>
 
-<a href="https://instagram.com/" class="instagram">
+<a href="https://instagram.com/" target="_blank" class="instagram">
+
 ♡
+
 </a>
 
 </div>
-<footer style="text-align:center; padding:25px; background:#f2f2f2; margin-top:40px; font-family:Arial;">
 
-  <h3 style="margin-bottom:10px;">LittleEvaVibe</h3>
+</body>
 
-  <p style="margin:5px 0;">🛍 Дитячий одяг та взуття</p>
-
-  
-
-  <a href="https://t.me/OQSCHnx_zG1jNjQy" target="_blank"
-
-     style="display:inline-block; margin:10px; padding:10px 15px; background:#0088cc; color:white; text-decoration:none; border-radius:8px;">
-
-    💬 Написати в Telegram
-
-  </a>
-
-  <!-- Телефон -->
-
-  <p style="margin:10px 0;">
-
-    📞 <a href="tel:+380XXXXXXXXX" style="color:black; text-decoration:none;">
-
-      +380 XX XXX XX XX
-
-    </a>
-
-  </p>
-
-  <!-- Instagram (можеш замінити) -->
-
-  <a href="https://instagram.com/" target="_blank"
-
-     style="display:inline-block; margin:5px; color:#E1306C; text-decoration:none;">
-
-    📸 Instagram
-
-  </a>
-
-  <p style="margin-top:15px; font-size:12px; color:gray;">
-
-    © 2026 LittleEvaVibe. Всі права захищені.
+</html>
 
   
 
@@ -889,7 +1202,7 @@ Little Eva Vibe
 
   
 
-  </p>
+
 
 
 </body>
