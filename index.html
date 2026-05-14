@@ -10,17 +10,19 @@
 
 <title>LittleEvaVibe</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 
 body{
 
-    margin:0;
+  margin:0;
 
-    font-family:Arial;
+  font-family:Inter;
 
-    background:#fdf7f9;
+  background:#f6f1ec;
 
-    color:#333;
+  color:#1f1f1f;
 
 }
 
@@ -28,175 +30,165 @@ body{
 
 header{
 
-    background:linear-gradient(90deg,#f7cfe0,#cfeee4);
+  text-align:center;
 
-    text-align:center;
-
-    padding:25px;
+  padding:30px 20px;
 
 }
 
-header h1{
+h1{
 
-    margin:0;
+  font-family:"Playfair Display", serif;
 
-    font-size:34px;
+  margin:0;
 
-    color:#444;
-
-}
-
-header p{
-
-    margin-top:8px;
+  font-size:36px;
 
 }
 
-/* NAV */
+/* GRID */
 
-nav{
+.grid{
 
-    display:flex;
+  display:grid;
 
-    justify-content:center;
+  grid-template-columns:1fr;
 
-    flex-wrap:wrap;
+  gap:15px;
 
-    gap:10px;
+  max-width:420px;
 
-    padding:15px;
+  margin:auto;
 
-    background:#fff;
-
-    position:sticky;
-
-    top:0;
+  padding:10px 15px 100px;
 
 }
 
-nav a{
-
-    text-decoration:none;
-
-    padding:10px 16px;
-
-    border-radius:12px;
-
-    background:#f7cfe0;
-
-    color:#333;
-
-    font-weight:bold;
-
-}
-
-/* PRODUCTS */
-
-.section-title{
-
-    text-align:center;
-
-    margin:25px 0 10px;
-
-    font-size:24px;
-
-}
-
-.products{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-    gap:18px;
-
-    padding:20px;
-
-}
+/* CARD */
 
 .card{
 
-    background:#fff;
+  background:white;
 
-    border-radius:18px;
+  border-radius:18px;
 
-    overflow:hidden;
+  overflow:hidden;
 
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
 
 }
 
 .card img{
 
-    width:100%;
+  width:100%;
 
-    height:300px;
+  height:280px;
 
-    object-fit:cover;
+  object-fit:cover;
 
 }
 
-.card-content{
+.card-body{
 
-    padding:15px;
+  padding:12px;
 
 }
 
 .price{
 
-    font-weight:bold;
+  font-size:13px;
 
-    margin:10px 0;
+  opacity:0.6;
 
 }
 
-/* BUTTON */
+/* BUTTONS */
 
 .btn{
 
-    display:block;
+  display:block;
 
-    text-align:center;
+  padding:10px;
 
-    padding:12px;
+  margin-top:10px;
 
-    border-radius:12px;
+  border-radius:12px;
 
-    background:#bfe9dd;
+  text-align:center;
 
-    color:#000;
+  text-decoration:none;
 
-    text-decoration:none;
-
-    font-weight:bold;
+  cursor:pointer;
 
 }
 
-/* FOOTER */
+.black{background:#1f1f1f;color:white;}
 
-footer{
+.gray{background:#eee;color:#1f1f1f;}
 
-    text-align:center;
+/* CART */
 
-    padding:25px;
+.cart{
 
-    background:linear-gradient(90deg,#f7cfe0,#cfeee4);
+  position:fixed;
 
-    margin-top:30px;
+  bottom:15px;
+
+  right:15px;
+
+  background:#1f1f1f;
+
+  color:white;
+
+  padding:12px 15px;
+
+  border-radius:50px;
+
+  cursor:pointer;
 
 }
 
-.footer-links a{
+/* MODAL */
 
-    display:inline-block;
+.modal{
 
-    margin:5px;
+  display:none;
 
-    text-decoration:none;
+  position:fixed;
 
-    font-weight:bold;
+  width:100%;
 
-    color:#333;
+  height:100%;
+
+  background:rgba(0,0,0,0.6);
+
+  top:0;
+
+  left:0;
+
+}
+
+.modal-content{
+
+  background:white;
+
+  width:90%;
+
+  max-width:350px;
+
+  margin:80px auto;
+
+  border-radius:16px;
+
+  padding:15px;
+
+}
+
+.close{
+
+  float:right;
+
+  cursor:pointer;
 
 }
 
@@ -208,131 +200,199 @@ footer{
 
 <header>
 
-    <h1>LittleEvaVibe</h1>
-
-    <p>Дитячий стильний одяг 💕</p>
+  <h1>LittleEvaVibe</h1>
 
 </header>
 
-<nav>
+<!-- PRODUCTS -->
 
-    <a href="#girls">Дівчатка</a>
+<div class="grid">
 
-    <a href="#boys">Хлопчики</a>
+  <div class="card">
 
-    <a href="#shoes">Взуття</a>
+    <img src="images/photo1.jpg">
 
-    <a href="https://www.instagram.com/littleevavibe" target="_blank">Instagram</a>
+    <div class="card-body">
 
-    <a href="https://t.me/OQSCHnx_zG1jNjQy" target="_blank">Telegram</a>
+      <b>Сукня преміум</b>
 
-</nav>
+      <div class="price">890 грн</div>
 
-<!-- ДІВЧАТКА -->
+      <button class="btn gray" onclick="add('Сукня преміум',890)">Додати</button>
 
-<h2 class="section-title" id="girls">Для дівчаток</h2>
-
-<div class="products">
-
-    <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=800&q=80">
-
-        <div class="card-content">
-
-            <h3>Плаття ніжне</h3>
-
-            <p class="price">650 грн</p>
-
-            <a class="btn" href="https://ig.me/m/littleevavibe" target="_blank">Замовити в Instagram</a>
-
-        </div>
+      <button class="btn black" onclick="openItem('Сукня преміум',890)">Замовити</button>
 
     </div>
 
-    <div class="card">
+  </div>
 
-        <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=800&q=80">
+  <div class="card">
 
-        <div class="card-content">
+    <img src="images/photo2.jpg">
 
-            <h3>Сукня м’ятна</h3>
+    <div class="card-body">
 
-            <p class="price">720 грн</p>
+      <b>Костюм стильний</b>
 
-            <a class="btn" href="https://ig.me/m/littleevavibe" target="_blank">Замовити</a>
+      <div class="price">990 грн</div>
 
-        </div>
+      <button class="btn gray" onclick="add('Костюм стильний',990)">Додати</button>
+
+      <button class="btn black" onclick="openItem('Костюм стильний',990)">Замовити</button>
 
     </div>
+
+  </div>
 
 </div>
 
-<!-- ХЛОПЧИКИ -->
+<!-- CART -->
 
-<h2 class="section-title" id="boys">Для хлопчиків</h2>
+<div class="cart" onclick="openCart()">
 
-<div class="products">
-
-    <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=800&q=80">
-
-        <div class="card-content">
-
-            <h3>Костюм класичний</h3>
-
-            <p class="price">890 грн</p>
-
-            <a class="btn" href="https://ig.me/m/littleevavibe" target="_blank">Замовити</a>
-
-        </div>
-
-    </div>
+🛒 <span id="count">0</span>
 
 </div>
 
-<!-- ВЗУТТЯ -->
+<!-- ITEM MODAL -->
 
-<h2 class="section-title" id="shoes">Взуття</h2>
+<div class="modal" id="modal">
 
-<div class="products">
+  <div class="modal-content">
 
-    <div class="card">
+    <span class="close" onclick="closeModal()">✖</span>
 
-        <img src="https://images.unsplash.com/photo-1528701800489-20be3c5d0c7d?auto=format&fit=crop&w=800&q=80">
+    <h3 id="title"></h3>
 
-        <div class="card-content">
+    <p id="price"></p>
 
-            <h3>Кросівки</h3>
+    <button class="btn black" onclick="checkout()">
 
-            <p class="price">750 грн</p>
+      Оформити
 
-            <a class="btn" href="https://ig.me/m/littleevavibe" target="_blank">Замовити</a>
+    </button>
 
-        </div>
-
-    </div>
+  </div>
 
 </div>
 
-<footer>
+<!-- CART MODAL -->
 
-    <h3>LittleEvaVibe</h3>
+<div class="modal" id="cart">
 
-    <p>Зв’яжіться з нами 👇</p>
+  <div class="modal-content">
 
-    <div class="footer-links">
+    <span class="close" onclick="closeCart()">✖</span>
 
-        <a href="tel:0998027612">📞 Подзвонити</a>
+    <h3>Кошик</h3>
 
-        <a href="https://www.instagram.com/littleevavibe" target="_blank">Instagram</a>
+    <div id="list"></div>
 
-        <a href="https://t.me/OQSCHnx_zG1jNjQy" target="_blank">Telegram</a>
+    <p id="total"></p>
 
-    </div>
+    <button class="btn black" onclick="send()">
 
-</footer>
+      Відправити замовлення
+
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+
+let cart=[];
+
+let current={};
+
+function add(name,price){
+
+  cart.push({name,price});
+
+  document.getElementById("count").innerText=cart.length;
+
+}
+
+function openItem(name,price){
+
+  current={name,price};
+
+  document.getElementById("title").innerText=name;
+
+  document.getElementById("price").innerText=price+" грн";
+
+  document.getElementById("modal").style.display="block";
+
+}
+
+function closeModal(){
+
+  document.getElementById("modal").style.display="none";
+
+}
+
+function checkout(){
+
+  add(current.name,current.price);
+
+  closeModal();
+
+}
+
+function openCart(){
+
+  let t=0;
+
+  let html="";
+
+  cart.forEach(i=>{
+
+    html+=i.name+" - "+i.price+" грн<br>";
+
+    t+=i.price;
+
+  });
+
+  document.getElementById("list").innerHTML=html;
+
+  document.getElementById("total").innerText="Разом: "+t+" грн";
+
+  document.getElementById("cart").style.display="block";
+
+}
+
+function closeCart(){
+
+  document.getElementById("cart").style.display="none";
+
+}
+
+function send(){
+
+  let text="Замовлення:%0A";
+
+  let t=0;
+
+  cart.forEach(i=>{
+
+    text+="- "+i.name+" "+i.price+" грн%0A";
+
+    t+=i.price;
+
+  });
+
+  text+="%0AРазом: "+t+" грн";
+
+  navigator.clipboard.writeText(text);
+
+  window.open("https://ig.me/m/littleevavibe","_blank");
+
+  alert("Замовлення скопійовано і відкрито Instagram 💎");
+
+}
+
+</script>
 
 </body>
 
