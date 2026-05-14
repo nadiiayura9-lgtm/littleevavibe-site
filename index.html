@@ -15,7 +15,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+.order-btn{
 
+  display:inline-block;
+
+  margin-top:10px;
+
+  padding:12px 20px;
+
+  background:black;
+
+  color:white;
+
+  text-decoration:none;
+
+  border-radius:12px;
+
+}
 <style>
 
 *{
@@ -697,7 +713,49 @@ padding:35px 25px;
 </style>
 
 </head>
+<script>
 
+function openTab(tabName) {
+
+  // ховаємо всі вкладки
+
+  let tabs = document.getElementsByClassName("tab-content");
+
+  for (let i = 0; i < tabs.length; i++) {
+
+    tabs[i].style.display = "none";
+
+  }
+
+  // прибираємо active у кнопок
+
+  let buttons = document.getElementsByClassName("tab-btn");
+
+  for (let i = 0; i < buttons.length; i++) {
+
+    buttons[i].classList.remove("active");
+
+  }
+
+  // показуємо потрібну вкладку
+
+  document.getElementById(tabName).style.display = "block";
+
+  // активна кнопка
+
+  document.querySelector(`[onclick="openTab('${tabName}')"]`)?.classList.add("active");
+
+}
+
+// автоматично відкривати вкладку для дівчаток
+
+window.onload = function() {
+
+  openTab('girls');
+
+}
+
+</script>
 <body>
 
 <div class="topbar">
@@ -766,9 +824,11 @@ Little Eva <span>Vibe</span>
 
 Перейти в каталог
 
-</a>
+<a href="#girls" onclick="openTab('girls')" class="catalog-btn">
 
-<a href="https://t.me/OQSCHnx_zG1jNjQy" target="_blank" class="btn btn-secondary">
+  </a>
+
+
 
 Telegram
 
@@ -813,23 +873,37 @@ Instagram
 <img src="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?q=80&w=800&auto=format&fit=crop">
 
 <h3>Для дівчаток</h3>
+<button class="tab-btn" onclick="openTab('girls')">Для дівчаток</button>
+
 
 <p>Ніжні та стильні образи</p>
 
 </div>
 
-<div class="category-card">
+<div id="girls" class="tab-content">
+
+  Тут товари для дівчаток
+
+</div>
+
+
 
 <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=800&auto=format&fit=crop">
 
 <h3>Для хлопчиків</h3>
+  
+
+<button class="tab-btn" onclick="openTab('boys')">Для хлопчиків</button>
 
 <p>Трендовий дитячий стиль</p>
 
 </div>
 
-<div class="category-card">
+<div id="boys" class="tab-content" style="display:none;">
 
+  Тут товари для хлопчиків
+
+</div>
 <img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?q=80&w=800&auto=format&fit=crop">
 
 <h3>Взуття</h3>
@@ -905,7 +979,11 @@ TOP
 <div class="price">
 
 790 грн
+<a href="https://t.me/OQSCHnx_zG1jNjQy" target="_blank" class="order-btn">
 
+  Замовити
+
+</a>
 </div>
 
 <a href="form.html" class="btn btn-primary">
@@ -1156,7 +1234,7 @@ Instagram
 
 <p>
 
-+380 XX XXX XX XX
++380 997027612
 
 </p>
 
