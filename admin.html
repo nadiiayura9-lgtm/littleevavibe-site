@@ -1,118 +1,78 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="uk">
 
 <head>
 
 <meta charset="UTF-8">
 
-<title>Admin Panel</title>
-
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
-
-<style>
-
-body{font-family:Arial;background:#f6f1ec;padding:20px;}
-
-.box{max-width:400px;margin:auto;background:white;padding:15px;border-radius:12px;}
-
-input{width:100%;padding:10px;margin:5px 0;}
-
-button{padding:10px;width:100%;background:black;color:white;border:none;border-radius:10px;}
-
-.item{background:#eee;padding:10px;margin:5px;border-radius:10px;}
-
-</style>
+<title>Admin Little Eva Vibe</title>
 
 </head>
 
 <body>
 
-<div class="box">
+<h2>Адмінка 💖</h2>
 
-<h2>Admin Panel</h2>
+<input id="name" placeholder="Назва"><br><br>
 
-<input id="name" placeholder="Назва товару">
+<input id="price" placeholder="Ціна"><br><br>
 
-<input id="price" placeholder="Ціна">
+<input id="img" placeholder="Фото URL"><br><br>
 
-<input id="img" placeholder="URL фото">
+<select id="cat">
 
-<button onclick="addProduct()">Додати товар</button>
+<option value="girls">Дівчатка</option>
 
-<hr>
+<option value="boys">Хлопчики</option>
 
-<div id="list"></div>
+<option value="shoes">Взуття</option>
 
-</div>
+<option value="sale">SALE</option>
+
+</select><br><br>
+
+<button onclick="add()">Додати товар</button>
+
+<ul id="list"></ul>
 
 <script>
 
-// 🔥 Firebase config (сюди вставиш свій)
+let products=JSON.parse(localStorage.getItem("products"))||[];
 
-const firebaseConfig = {
+function add(){
 
-  apiKey: "YOUR_KEY",
+products.push({
 
-  authDomain: "YOUR_DOMAIN",
+name:name.value,
 
-  projectId: "YOUR_ID"
+price:price.value,
 
-};
+img:img.value,
 
-firebase.initializeApp(firebaseConfig);
-
-const db = firebase.firestore();
-
-// ➕ Додати товар
-
-function addProduct(){
-
-  db.collection("products").add({
-
-    name: document.getElementById("name").value,
-
-    price: document.getElementById("price").value,
-
-    img: document.getElementById("img").value
-
-  });
-
-}
-
-// 📦 Показ товарів
-
-db.collection("products").onSnapshot(snap=>{
-
-  let html="";
-
-  snap.forEach(doc=>{
-
-    html+=`
-
-    <div class="item">
-
-      ${doc.data().name} - ${doc.data().price} грн
-
-      <button onclick="del('${doc.id}')">X</button>
-
-    </div>`;
-
-  });
-
-  document.getElementById("list").innerHTML=html;
+cat:cat.value
 
 });
 
-// ❌ Видалити
+localStorage.setItem("products",JSON.stringify(products));
 
-function del(id){
-
-  db.collection("products").doc(id).delete();
+render();
 
 }
+
+function render(){
+
+list.innerHTML="";
+
+products.forEach(p=>{
+
+list.innerHTML+=`<li>${p.name} - ${p.price} грн (${p.cat})</li>`;
+
+});
+
+}
+
+render();
 
 </script>
 
