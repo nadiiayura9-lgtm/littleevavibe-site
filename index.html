@@ -8,187 +8,537 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LittleEvaVibe</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Little Eva Vibe</title>
 
 <style>
 
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:'Arial',sans-serif;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
 body{
 
-  margin:0;
+background:#fffdfd;
 
-  font-family:Inter;
-
-  background:#f6f1ec;
-
-  color:#1f1f1f;
+color:#444;
 
 }
 
-/* HEADER */
+/* TOP */
 
-header{
+.top-bar{
 
-  text-align:center;
+background:#f8dfe5;
 
-  padding:30px 20px;
+padding:12px;
 
-}
+text-align:center;
 
-h1{
+font-size:15px;
 
-  font-family:"Playfair Display", serif;
+color:#666;
 
-  margin:0;
-
-  font-size:36px;
+letter-spacing:0.5px;
 
 }
 
-/* GRID */
+/* LOGO */
 
-.grid{
+.logo{
 
-  display:grid;
+text-align:center;
 
-  grid-template-columns:1fr;
+padding:40px 20px 20px;
 
-  gap:15px;
+font-size:58px;
 
-  max-width:420px;
+font-weight:700;
 
-  margin:auto;
-
-  padding:10px 15px 100px;
+letter-spacing:1px;
 
 }
 
-/* CARD */
+.logo .pink{
 
-.card{
-
-  background:white;
-
-  border-radius:18px;
-
-  overflow:hidden;
-
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+color:#e0a3b4;
 
 }
 
-.card img{
+.logo .green{
 
-  width:100%;
-
-  height:280px;
-
-  object-fit:cover;
+color:#b9cfad;
 
 }
 
-.card-body{
+/* MENU */
 
-  padding:12px;
+nav{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:24px;
+
+padding:20px;
 
 }
 
-.price{
+nav a{
 
-  font-size:13px;
+text-decoration:none;
 
-  opacity:0.6;
+color:#444;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:0.3s;
+
+position:relative;
+
+}
+
+nav a:hover{
+
+color:#e0a3b4;
+
+}
+
+/* HERO */
+
+.hero{
+
+background:linear-gradient(to right,#fff7f9,#f7fff4);
+
+padding:90px 20px;
+
+text-align:center;
+
+}
+
+.badge{
+
+display:inline-block;
+
+background:#ffe7ef;
+
+color:#e0a3b4;
+
+padding:14px 32px;
+
+border-radius:40px;
+
+font-size:22px;
+
+font-weight:bold;
+
+margin-bottom:35px;
+
+}
+
+.hero h1{
+
+font-size:68px;
+
+line-height:1.1;
+
+color:#333;
+
+max-width:900px;
+
+margin:auto;
+
+margin-bottom:30px;
+
+}
+
+.hero p{
+
+font-size:27px;
+
+line-height:1.6;
+
+max-width:850px;
+
+margin:auto;
+
+color:#777;
 
 }
 
 /* BUTTONS */
 
+.buttons{
+
+margin-top:50px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:20px;
+
+}
+
 .btn{
 
-  display:block;
+text-decoration:none;
 
-  padding:10px;
+padding:22px 40px;
 
-  margin-top:10px;
+border-radius:50px;
 
-  border-radius:12px;
+font-size:24px;
 
-  text-align:center;
+font-weight:bold;
 
-  text-decoration:none;
+width:90%;
 
-  cursor:pointer;
+max-width:520px;
 
-}
+transition:0.3s;
 
-.black{background:#1f1f1f;color:white;}
-
-.gray{background:#eee;color:#1f1f1f;}
-
-/* CART */
-
-.cart{
-
-  position:fixed;
-
-  bottom:15px;
-
-  right:15px;
-
-  background:#1f1f1f;
-
-  color:white;
-
-  padding:12px 15px;
-
-  border-radius:50px;
-
-  cursor:pointer;
+text-align:center;
 
 }
 
-/* MODAL */
+.catalog-btn{
 
-.modal{
+background:#e0a3b4;
 
-  display:none;
-
-  position:fixed;
-
-  width:100%;
-
-  height:100%;
-
-  background:rgba(0,0,0,0.6);
-
-  top:0;
-
-  left:0;
+color:white;
 
 }
 
-.modal-content{
+.catalog-btn:hover{
 
-  background:white;
-
-  width:90%;
-
-  max-width:350px;
-
-  margin:80px auto;
-
-  border-radius:16px;
-
-  padding:15px;
+background:#d08fa2;
 
 }
 
-.close{
+.instagram-btn{
 
-  float:right;
+background:#ff4fa1;
 
-  cursor:pointer;
+color:white;
+
+}
+
+.instagram-btn:hover{
+
+background:#eb3d8d;
+
+}
+
+.telegram-btn{
+
+background:#1a98ea;
+
+color:white;
+
+}
+
+.telegram-btn:hover{
+
+background:#0d7cc7;
+
+}
+
+/* SECTIONS */
+
+section{
+
+padding:90px 20px;
+
+text-align:center;
+
+}
+
+section h2{
+
+font-size:48px;
+
+margin-bottom:25px;
+
+color:#333;
+
+}
+
+section p{
+
+font-size:23px;
+
+color:#666;
+
+line-height:1.7;
+
+max-width:850px;
+
+margin:auto;
+
+}
+
+/* PRODUCTS */
+
+.products{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:40px;
+
+margin-top:55px;
+
+}
+
+.product{
+
+background:white;
+
+border-radius:35px;
+
+overflow:hidden;
+
+box-shadow:0 10px 35px rgba(0,0,0,0.08);
+
+transition:0.35s;
+
+}
+
+.product:hover{
+
+transform:translateY(-8px);
+
+}
+
+.product img{
+
+width:100%;
+
+height:430px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+.product-content{
+
+padding:28px;
+
+text-align:left;
+
+}
+
+.product h3{
+
+font-size:30px;
+
+margin-bottom:12px;
+
+color:#333;
+
+}
+
+.product p{
+
+font-size:25px;
+
+font-weight:bold;
+
+color:#e0a3b4;
+
+margin-bottom:25px;
+
+}
+
+.old-price{
+
+text-decoration:line-through;
+
+color:#999;
+
+font-size:20px;
+
+font-weight:normal;
+
+display:block;
+
+margin-bottom:10px;
+
+}
+
+/* PRODUCT BUTTONS */
+
+.buttons-product{
+
+display:flex;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+
+.cart-btn{
+
+flex:1;
+
+background:#f4f4f4;
+
+color:#444;
+
+padding:16px;
+
+border-radius:18px;
+
+text-align:center;
+
+text-decoration:none;
+
+font-size:17px;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+.cart-btn:hover{
+
+background:#ebebeb;
+
+}
+
+.buy-btn{
+
+flex:1;
+
+background:#e0a3b4;
+
+color:white;
+
+padding:16px;
+
+border-radius:18px;
+
+text-align:center;
+
+text-decoration:none;
+
+font-size:17px;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+.buy-btn:hover{
+
+background:#cf8ea0;
+
+}
+
+/* PAYMENT */
+
+.payment-box{
+
+background:#fff5f8;
+
+padding:45px;
+
+border-radius:35px;
+
+max-width:700px;
+
+margin:auto;
+
+font-size:22px;
+
+line-height:2;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#f8dfe5;
+
+padding:40px 20px;
+
+text-align:center;
+
+font-size:18px;
+
+color:#666;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.logo{
+
+font-size:42px;
+
+}
+
+.hero h1{
+
+font-size:44px;
+
+}
+
+.hero p{
+
+font-size:21px;
+
+}
+
+.btn{
+
+font-size:21px;
+
+padding:18px 30px;
+
+}
+
+section h2{
+
+font-size:36px;
+
+}
+
+.product img{
+
+height:340px;
+
+}
 
 }
 
@@ -198,201 +548,325 @@ h1{
 
 <body>
 
-<header>
+<div class="top-bar">
 
-  <h1>LittleEvaVibe</h1>
-
-</header>
-
-<!-- PRODUCTS -->
-
-<div class="grid">
-
-  <div class="card">
-
-    <img src="images/photo1.jpg">
-
-    <div class="card-body">
-
-      <b>Сукня преміум</b>
-
-      <div class="price">890 грн</div>
-
-      <button class="btn gray" onclick="add('Сукня преміум',890)">Додати</button>
-
-      <button class="btn black" onclick="openItem('Сукня преміум',890)">Замовити</button>
-
-    </div>
-
-  </div>
-
-  <div class="card">
-
-    <img src="images/photo2.jpg">
-
-    <div class="card-body">
-
-      <b>Костюм стильний</b>
-
-      <div class="price">990 грн</div>
-
-      <button class="btn gray" onclick="add('Костюм стильний',990)">Додати</button>
-
-      <button class="btn black" onclick="openItem('Костюм стильний',990)">Замовити</button>
-
-    </div>
-
-  </div>
+🤍 Безкоштовна доставка від 2000 грн
 
 </div>
 
-<!-- CART -->
+<div class="logo">
 
-<div class="cart" onclick="openCart()">
+<span class="pink">Little Eva</span>
 
-🛒 <span id="count">0</span>
-
-</div>
-
-<!-- ITEM MODAL -->
-
-<div class="modal" id="modal">
-
-  <div class="modal-content">
-
-    <span class="close" onclick="closeModal()">✖</span>
-
-    <h3 id="title"></h3>
-
-    <p id="price"></p>
-
-    <button class="btn black" onclick="checkout()">
-
-      Оформити
-
-    </button>
-
-  </div>
+<span class="green">Vibe</span>
 
 </div>
 
-<!-- CART MODAL -->
+<nav>
 
-<div class="modal" id="cart">
+<a href="#home">Головна</a>
 
-  <div class="modal-content">
+<a href="#catalog">Каталог</a>
 
-    <span class="close" onclick="closeCart()">✖</span>
+<a href="#new">Новинки</a>
 
-    <h3>Кошик</h3>
+<a href="#shoes">Взуття</a>
 
-    <div id="list"></div>
+<a href="#sale">Розпродаж</a>
 
-    <p id="total"></p>
+<a href="#reviews">Відгуки</a>
 
-    <button class="btn black" onclick="send()">
+<a href="#payment">Оплата</a>
 
-      Відправити замовлення
+<a href="#cart">Кошик</a>
 
-    </button>
+</nav>
 
-  </div>
+<section class="hero" id="home">
+
+<div class="badge">
+
+Нова колекція ✨
 
 </div>
 
-<script>
+<h1>
 
-let cart=[];
+Стильний дитячий одяг преміум якості
 
-let current={};
+</h1>
 
-function add(name,price){
+<p>
 
-  cart.push({name,price});
+Трендові образи для маленьких модників та модниць 🤍
 
-  document.getElementById("count").innerText=cart.length;
+Ніжні кольори, комфорт та стиль у кожній моделі.
 
-}
+</p>
 
-function openItem(name,price){
+<div class="buttons">
 
-  current={name,price};
+<a href="#catalog" class="btn catalog-btn">
 
-  document.getElementById("title").innerText=name;
+Перейти в каталог
 
-  document.getElementById("price").innerText=price+" грн";
+</a>
 
-  document.getElementById("modal").style.display="block";
+<a href="https://www.instagram.com/littleevavibe?igsh=ZXEycGkxeTc4ajdr&utm_source=qr" class="btn instagram-btn">
 
-}
+Замовити в Instagram
 
-function closeModal(){
+</a>
 
-  document.getElementById("modal").style.display="none";
+<a href="https://t.me/OQSCHnx_zG1jNjQy" class="btn telegram-btn">
 
-}
+Написати в Telegram
 
-function checkout(){
+</a>
 
-  add(current.name,current.price);
+</div>
 
-  closeModal();
+</section>
 
-}
+<section id="catalog">
 
-function openCart(){
+<h2>Каталог</h2>
 
-  let t=0;
+<div class="products">
 
-  let html="";
+<div class="product">
 
-  cart.forEach(i=>{
+<img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=1200&auto=format&fit=crop" alt="">
 
-    html+=i.name+" - "+i.price+" грн<br>";
+<div class="product-content">
 
-    t+=i.price;
+<h3>Ніжний костюм для дівчинки</h3>
 
-  });
+<p>1290 грн</p>
 
-  document.getElementById("list").innerHTML=html;
+<div class="buttons-product">
 
-  document.getElementById("total").innerText="Разом: "+t+" грн";
+<a href="#cart" class="cart-btn">
 
-  document.getElementById("cart").style.display="block";
+🛍 Додати в кошик
 
-}
+</a>
 
-function closeCart(){
+<a href="https://www.instagram.com/littleevavibe?igsh=ZXEycGkxeTc4ajdr&utm_source=qr" class="buy-btn">
 
-  document.getElementById("cart").style.display="none";
+Замовити
 
-}
+</a>
 
-function send(){
+</div>
 
-  let text="Замовлення:%0A";
+</div>
 
-  let t=0;
+</div>
 
-  cart.forEach(i=>{
+<div class="product">
 
-    text+="- "+i.name+" "+i.price+" грн%0A";
+<img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=1200&auto=format&fit=crop" alt="">
 
-    t+=i.price;
+<div class="product-content">
 
-  });
+<h3>Стильні лофери</h3>
 
-  text+="%0AРазом: "+t+" грн";
+<p>990 грн</p>
 
-  navigator.clipboard.writeText(text);
+<div class="buttons-product">
 
-  window.open("https://ig.me/m/littleevavibe","_blank");
+<a href="#cart" class="cart-btn">
 
-  alert("Замовлення скопійовано і відкрито Instagram 💎");
+🛍 Додати в кошик
 
-}
+</a>
 
-</script>
+<a href="https://www.instagram.com/littleevavibe?igsh=ZXEycGkxeTc4ajdr&utm_source=qr" class="buy-btn">
+
+Замовити
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="new">
+
+<h2>Новинки ✨</h2>
+
+<p>
+
+Щотижня додаємо нові стильні моделі для дітей.
+
+</p>
+
+</section>
+
+<section id="shoes">
+
+<h2>Взуття 🤍</h2>
+
+<p>
+
+Лофери, кросівки, босоніжки та інше стильне дитяче взуття.
+
+</p>
+
+</section>
+
+<section id="sale">
+
+<h2>Розпродаж 🔥</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop" alt="">
+
+<div class="product-content">
+
+<h3>Світшот для дівчинки</h3>
+
+<p>
+
+<span class="old-price">1290 грн</span>
+
+890 грн
+
+</p>
+
+<div class="buttons-product">
+
+<a href="#cart" class="cart-btn">
+
+🛍 Додати в кошик
+
+</a>
+
+<a href="https://www.instagram.com/littleevavibe?igsh=ZXEycGkxeTc4ajdr&utm_source=qr" class="buy-btn">
+
+Замовити
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1200&auto=format&fit=crop" alt="">
+
+<div class="product-content">
+
+<h3>Дитячі кросівки</h3>
+
+<p>
+
+<span class="old-price">1490 грн</span>
+
+1090 грн
+
+</p>
+
+<div class="buttons-product">
+
+<a href="#cart" class="cart-btn">
+
+🛍 Додати в кошик
+
+</a>
+
+<a href="https://www.instagram.com/littleevavibe?igsh=ZXEycGkxeTc4ajdr&utm_source=qr" class="buy-btn">
+
+Замовити
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="reviews">
+
+<h2>Відгуки ❤️</h2>
+
+<p>
+
+Тут можна додати фото та скріни відгуків клієнтів.
+
+</p>
+
+</section>
+
+<section id="payment">
+
+<h2>Оплата та доставка</h2>
+
+<div class="payment-box">
+
+✔ Оплата на карту<br>
+
+✔ Накладений платіж<br>
+
+✔ Відправка Новою Поштою<br>
+
+✔ Обмін та повернення можливі
+
+</div>
+
+</section>
+
+<section id="cart">
+
+<h2>Кошик 🛍️</h2>
+
+<div class="payment-box">
+
+Ваш кошик поки порожній 🤍
+
+<br><br>
+
+<a href="#catalog" class="buy-btn">
+
+Перейти до покупок
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+Little Eva Vibe © 2026 🤍
+
+<br><br>
+
+Instagram: @littleevavibe
+
+<br><br>
+
+Telegram: LEV | DROP | OPT
+
+</footer>
 
 </body>
 
