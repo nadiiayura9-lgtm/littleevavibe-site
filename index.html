@@ -18,35 +18,29 @@ margin:0;
 
 font-family:Arial;
 
-background:#fff7fb;
+background:#fff;
+
+color:#222;
 
 }
 
-/* HEADER */
+/* HERO */
 
-header{
+.hero{
 
 background:linear-gradient(135deg,#ffd6e7,#d6fff3);
 
-padding:20px;
-
 text-align:center;
 
-}
-
-.logo{
-
-font-size:26px;
-
-font-weight:bold;
-
-letter-spacing:1px;
+padding:25px;
 
 }
 
-/* NAV */
+.hero h1{margin:0;font-size:28px}
 
-nav{
+/* SOCIAL */
+
+.links{
 
 display:flex;
 
@@ -54,15 +48,45 @@ justify-content:center;
 
 gap:10px;
 
+padding:10px;
+
+}
+
+.links a{
+
+padding:10px 15px;
+
+border-radius:20px;
+
+background:#111;
+
+color:#fff;
+
+text-decoration:none;
+
+font-size:14px;
+
+}
+
+/* CATEGORIES */
+
+.cats{
+
+display:flex;
+
 flex-wrap:wrap;
+
+justify-content:center;
+
+gap:10px;
 
 padding:10px;
 
 }
 
-nav button{
+.cats button{
 
-padding:10px 15px;
+padding:10px 14px;
 
 border:none;
 
@@ -71,6 +95,14 @@ border-radius:20px;
 background:#f3f3f3;
 
 cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.cats button:hover{
+
+background:#ffd6e7;
 
 }
 
@@ -90,21 +122,43 @@ padding:15px;
 
 .card{
 
-background:white;
-
 border-radius:15px;
 
-padding:10px;
+overflow:hidden;
 
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+background:#fff;
+
+cursor:pointer;
+
+transition:0.3s;
 
 }
+
+.card:hover{transform:translateY(-5px)}
 
 .card img{
 
 width:100%;
 
-border-radius:10px;
+height:180px;
+
+object-fit:cover;
+
+}
+
+.card-body{
+
+padding:10px;
+
+}
+
+.price{
+
+font-weight:bold;
+
+margin-top:5px;
 
 }
 
@@ -116,31 +170,35 @@ padding:8px;
 
 border:none;
 
+background:#111;
+
+color:#fff;
+
 border-radius:10px;
 
-background:black;
-
-color:white;
+cursor:pointer;
 
 }
 
 /* CART */
 
-.cartBtn{
+.cart{
 
 position:fixed;
 
-bottom:10px;
+bottom:15px;
 
-right:10px;
+right:15px;
 
-background:black;
+background:#111;
 
-color:white;
+color:#fff;
 
-padding:10px 15px;
+padding:12px 15px;
 
-border-radius:20px;
+border-radius:30px;
+
+cursor:pointer;
 
 }
 
@@ -148,21 +206,87 @@ border-radius:20px;
 
 position:fixed;
 
-bottom:60px;
+bottom:70px;
 
-right:10px;
+right:15px;
 
-background:white;
+width:270px;
 
-width:260px;
+background:#fff;
 
 padding:10px;
 
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
 border-radius:15px;
 
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
+display:none;
+
+}
+
+/* MODAL */
+
+.modal{
+
+position:fixed;
+
+top:0;left:0;
+
+width:100%;height:100%;
+
+background:rgba(0,0,0,0.5);
 
 display:none;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.modal-content{
+
+background:#fff;
+
+width:300px;
+
+border-radius:15px;
+
+overflow:hidden;
+
+}
+
+.modal-content img{
+
+width:100%;
+
+height:200px;
+
+object-fit:cover;
+
+}
+
+.modal-body{padding:10px}
+
+/* FORM */
+
+form{
+
+padding:15px;
+
+}
+
+input,textarea{
+
+width:100%;
+
+padding:10px;
+
+margin:5px 0;
+
+border:1px solid #ddd;
+
+border-radius:10px;
 
 }
 
@@ -172,29 +296,51 @@ display:none;
 
 <body>
 
-<header>
+<!-- HERO -->
 
-<div class="logo">💖 Little Eva Vibe</div>
+<div class="hero">
 
-</header>
+<h1>💖 Little Eva Vibe</h1>
 
-<nav>
+<p>Дитячий boutique-магазин</p>
 
-<button onclick="filter('all')">Все</button>
+</div>
 
-<button onclick="filter('girls')">Дівчатка</button>
+<!-- SOCIAL -->
 
-<button onclick="filter('boys')">Хлопчики</button>
+<div class="links">
 
-<button onclick="filter('shoes')">Взуття</button>
+<a href="https://t.me/OQSCHnx_zG1jNjQy" target="_blank">Telegram</a>
 
-<button onclick="filter('sale')">SALE</button>
+<a href="https://instagram.com" target="_blank">Instagram</a>
 
-</nav>
+</div>
+
+<!-- CATEGORIES -->
+
+<div class="cats">
+
+<button onclick="filter('all')">Всі</button>
+
+<button onclick="filter('girls')">Дівчатка 👧</button>
+
+<button onclick="filter('boys')">Хлопчики 👦</button>
+
+<button onclick="filter('shoes')">Взуття 👟</button>
+
+<button onclick="filter('access')">Аксесуари 🎀</button>
+
+<button onclick="filter('sale')">SALE 🔥</button>
+
+</div>
+
+<!-- PRODUCTS -->
 
 <div class="products" id="products"></div>
 
-<div class="cartBtn" onclick="toggleCart()">
+<!-- CART -->
+
+<div class="cart" onclick="toggleCart()">
 
 🛒 <span id="count">0</span>
 
@@ -202,53 +348,71 @@ display:none;
 
 <div id="cartBox"></div>
 
-<!-- ORDER -->
+<!-- FORM -->
 
-<div id="orderForm" style="display:none;padding:15px;">
+<form onsubmit="sendOrder(event)">
 
 <h3>Оформлення замовлення</h3>
 
-<input id="name" placeholder="Ім'я"><br><br>
+<input id="name" placeholder="Імʼя" required>
 
-<input id="phone" placeholder="Телефон"><br><br>
+<input id="phone" placeholder="Телефон" required>
 
-<button onclick="sendOrder()">Підтвердити</button>
+<input id="city" placeholder="Місто">
+
+<textarea id="comment" placeholder="Коментар"></textarea>
+
+<input type="file" accept="image/*" onchange="loadPhoto(event)">
+
+<img id="preview" style="width:100%;display:none;border-radius:10px;margin-top:10px;">
+
+<button type="submit">📩 Відправити замовлення</button>
+
+</form>
+
+<!-- MODAL -->
+
+<div class="modal" id="modal" onclick="closeModal(event)">
+
+<div class="modal-content">
+
+<img id="mimg">
+
+<div class="modal-body">
+
+<h3 id="mtitle"></h3>
+
+<p id="mprice"></p>
+
+<button onclick="addModal()">Додати в кошик</button>
+
+</div>
+
+</div>
 
 </div>
 
 <script>
 
-// ===== FIREBASE ПІЗНІШЕ ПІДКЛЮЧАЄТЬСЯ =====
+let products=[
 
-let products = [
+{name:"Сукня ніжна",price:650,cat:"girls",img:"https://via.placeholder.com/400"},
 
-{
+{name:"Костюм хлопчик",price:800,cat:"boys",img:"https://via.placeholder.com/400"},
 
-name:"Сукня ніжна",
+{name:"Лофери",price:590,cat:"shoes",img:"https://via.placeholder.com/400"},
 
-price:650,
+{name:"Бантик набір",price:199,cat:"access",img:"https://via.placeholder.com/400"},
 
-img:"https://via.placeholder.com/200",
-
-cat:"girls"
-
-},
-
-{
-
-name:"Костюм хлопчик",
-
-price:800,
-
-img:"https://via.placeholder.com/200",
-
-cat:"boys"
-
-}
+{name:"SALE сукня",price:399,cat:"sale",img:"https://via.placeholder.com/400"}
 
 ];
 
 let cart=[];
+
+let selected=null;
+
+/* RENDER */
 
 function render(list=products){
 
@@ -260,15 +424,17 @@ list.forEach((p,i)=>{
 
 box.innerHTML+=`
 
-<div class="card">
+<div class="card" onclick="openModal(${i})">
 
 <img src="${p.img}">
 
+<div class="card-body">
+
 <h4>${p.name}</h4>
 
-<p>${p.price} грн</p>
+<div class="price">${p.price} грн</div>
 
-<button onclick="add(${i})">Додати</button>
+</div>
 
 </div>`;
 
@@ -278,17 +444,41 @@ box.innerHTML+=`
 
 render();
 
+/* FILTER */
+
 function filter(cat){
 
-if(cat==="all") render();
+if(cat==="all") render(products);
 
 else render(products.filter(p=>p.cat===cat));
 
 }
 
-function add(i){
+/* MODAL */
 
-cart.push(products[i]);
+function openModal(i){
+
+selected=products[i];
+
+document.getElementById("modal").style.display="flex";
+
+document.getElementById("mimg").src=selected.img;
+
+document.getElementById("mtitle").innerText=selected.name;
+
+document.getElementById("mprice").innerText=selected.price+" грн";
+
+}
+
+function closeModal(e){
+
+if(e.target.id==="modal") document.getElementById("modal").style.display="none";
+
+}
+
+function addModal(){
+
+cart.push(selected);
 
 document.getElementById("count").innerText=cart.length;
 
@@ -296,9 +486,11 @@ renderCart();
 
 }
 
+/* CART */
+
 function toggleCart(){
 
-document.getElementById("cartBox").style.display =
+document.getElementById("cartBox").style.display=
 
 document.getElementById("cartBox").style.display==="block"?"none":"block";
 
@@ -310,35 +502,49 @@ let box=document.getElementById("cartBox");
 
 let total=0;
 
-box.innerHTML="<b>Кошик</b><br>";
+box.innerHTML="<h3>Кошик</h3>";
 
-cart.forEach((c,i)=>{
+cart.forEach(c=>{
 
-box.innerHTML+=`${c.name} - ${c.price} грн <br>`;
+box.innerHTML+=`${c.name} - ${c.price} грн<br>`;
 
 total+=c.price;
 
 });
 
-box.innerHTML+=`<hr><b>Сума: ${total} грн</b><br>
-
-<button onclick="showOrder()">Оформити</button>`;
+box.innerHTML+=`<hr><b>Сума: ${total} грн</b>`;
 
 }
 
-function showOrder(){
+/* PHOTO UPLOAD */
 
-document.getElementById("orderForm").style.display="block";
+function loadPhoto(e){
+
+let img=document.getElementById("preview");
+
+img.src=URL.createObjectURL(e.target.files[0]);
+
+img.style.display="block";
 
 }
 
-function sendOrder(){
+/* ORDER */
 
-let text=`🛍 Little Eva Vibe
+function sendOrder(e){
 
-Ім'я: ${name.value}
+e.preventDefault();
+
+let text=
+
+`💖 Little Eva Vibe
+
+Імʼя: ${name.value}
 
 Телефон: ${phone.value}
+
+Місто: ${city.value}
+
+Коментар: ${comment.value}
 
 Товари: ${cart.map(i=>i.name).join(", ")}`;
 
@@ -361,6 +567,8 @@ text:text
 alert("Замовлення відправлено 💖");
 
 cart=[];
+
+document.getElementById("count").innerText=0;
 
 }
 
